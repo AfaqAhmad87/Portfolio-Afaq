@@ -1,0 +1,274 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0%;
+  margin: 0%;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080505;
+  overflow-x: hidden;
+}
+
+h1 {
+  font-size: 3rem;
+  /* letter-spacing: 10px; */
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+  font-family: cursive;
+}
+section {
+  font-family: cursive;
+}
+p {
+  font-family: monospace;
+  line-height: 40px;
+}
+
+ul li:hover {
+  border-bottom: 2.5px solid #39bda7;
+  color: #39bda7;
+}
+#icon {
+  /* width: 20px; */
+  color: #39bda7;
+}
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  border: 1px solid #4f4f4f;
+  border-radius: 4px;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  font-size: 19px;
+  cursor: pointer;
+  color: #eee;
+  z-index: 1;
+  margin-top: 20px;
+}
+
+.button:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #39bda7;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button:hover {
+  color: #ffffff;
+  border: 1px solid #39bda7;
+}
+
+.button:hover:before {
+  top: -35%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button:hover:after {
+  top: -45%;
+  background-color: #39bda7;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.skills-line1 {
+  width: 0;
+  height: 2px;
+
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine1 2s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+.skills-line2 {
+  width: 0;
+  height: 2px;
+
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine2 2s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+
+.skills-line3 {
+  width: 0;
+  height: 2px;
+
+  border-radius: 100%;
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine3 2s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+.skills-line4 {
+  width: 0;
+  height: 2px;
+
+  border-radius: 100%;
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine2 4s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+.skills-line5 {
+  width: 0;
+  height: 2px;
+
+  border-radius: 100%;
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine4 2s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+.skills-line6 {
+  width: 0;
+  height: 2px;
+
+  border-radius: 100%;
+  background-color: #39bda7; /* or your preferred color */
+  animation: expandLine5 1s ease-in-out forwards; /* adjust duration and timing function as needed */
+}
+#text {
+  color: #39bda7;
+  font-size: 2.5rem;
+  letter-spacing: 5px;
+}
+#text a {
+  animation: bounce 1 infinite;
+}
+.offcanvas-header .btn-close {
+  color: red; /* Change to your desired color */
+}
+
+@keyframes expandLine1 {
+  to {
+    width: 100%;
+  }
+}
+@keyframes expandLine2 {
+  to {
+    width: 70%;
+  }
+}
+@keyframes expandLine3 {
+  to {
+    width: 60%;
+  }
+}
+@keyframes expandLine4 {
+  to {
+    width: 50%;
+  }
+}
+@keyframes expandLine5 {
+  to {
+    width: 60%;
+  }
+}
+@keyframes expandLine6 {
+  to {
+    width: 60%;
+  }
+}
+/***/
+.dashboard {
+  display: flex;
+}
+
+svg {
+  width: 114px;
+  height: 114px;
+  margin: 1em;
+}
+
+.bg {
+  fill: none;
+  stroke-width: 5px;
+  stroke: #eef1f3;
+}
+
+[class^="meter-"] {
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50%;
+}
+
+.meter-1 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 100;
+  stroke: #39bda7;
+  animation: progress-1 2s ease-out;
+}
+.meter-2 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 200;
+  stroke: #39bda7;
+  animation: progress-2 2s ease-out;
+}
+.meter-3 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 50;
+  stroke: #39bda7;
+  animation: progress-3 2s ease-out;
+}
+.meter-4 {
+  stroke-dasharray: 360;
+  stroke-dashoffset: 70;
+  stroke: #39bda7;
+  animation: progress-4 2s ease-out;
+}
+/*  */
+
+@keyframes progress-1 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 100;
+  }
+}
+@keyframes progress-2 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 200;
+  }
+}
+@keyframes progress-3 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 50;
+  }
+}
+@keyframes progress-4 {
+  from {
+    stroke-dashoffset: 360;
+  }
+  to {
+    stroke-dashoffset: 70;
+  }
+}
